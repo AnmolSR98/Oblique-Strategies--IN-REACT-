@@ -1,13 +1,142 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Merriweather';
+  font-weight: 300;
+  background-image: url('./backgrounds/04.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center;
+  background-color: navy;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@media (orientation: landscape){
+  .content {
+      display: grid; 
+      place-items: center; 
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 30%;
+      height: 40%;
+      bottom: 30%;
+      width: 80%;
+      left: 10%;
+      right: 10%;
+      border-radius: 15px;
+      animation-delay: 3s;
+      animation: fadeIn 4s;
+      border-color: white;
+      border-style: solid;
+  }
+
+  .text{
+      width: 80%;
+      position: inherit;
+      top: 42%;
+      font-size: 35px;
+      margin: 10px;
+      padding: 3px;
+      color: white;
+      opacity: 1.0;
+      display: grid;
+      animation-delay: 3s;
+      animation: fadeIn 4s;
+      text-align: center;
+      overflow: auto;
+  }
+
+  @keyframes fadeIn {
+      0% { opacity: 0; font-size: 31px;}
+      10% { opacity: 0; font-size: 32px;}
+      25% { opacity: 0.0625; font-size: 33px;}
+      37% { opacity: 0.15; font-size: 33.5px;}
+      50% { opacity: 0.25; font-size: 34px;}
+      62% { opacity: 0.36; font-size: 34.25px;}
+      75% { opacity: 0.5625; font-size: 34.5px;}
+      81% { opacity: 0.65; font-size: 34.65px;}
+      87% { opacity: 0.75; font-size: 34.75px;}
+      100% { opacity: 1; font-size: 35px;}
+  }
+}
+
+@media (orientation: portrait){
+  .content {
+      display: grid; 
+      place-items: center; 
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 37%;
+      height: 26%;
+      bottom: 37%;
+      width: 80%;
+      left: 10%;
+      right: 10%;
+      border-radius: 15px;
+      animation: fadeIn 4s;
+      animation-delay: 3s;
+      border-color: white;
+      border-style: solid;
+  }
+
+  .text{
+      width: 80%;
+      position: inherit;
+      top: 45%;
+      font-size: 55px;
+      margin: 10px;
+      padding: 3px;
+      color: white;
+      opacity: 1.0;
+      display: grid;
+      animation: fadeIn 4s;
+      animation-delay: 3s;
+      text-align: center;
+      overflow: auto;
+  }
+
+  @keyframes fadeIn {
+      0% { opacity: 0; font-size: 51;}
+      10% { opacity: 0; font-size: 52px;}
+      25% { opacity: 0.0625; font-size: 53px;}
+      37% { opacity: 0.15; font-size: 53.5px;}
+      50% { opacity: 0.25; font-size: 54px;}
+      62% { opacity: 0.36; font-size: 54.25px;}
+      75% { opacity: 0.5625; font-size: 54.5px;}
+      81% { opacity: 0.65; font-size: 54.65px;}
+      87% { opacity: 0.75; font-size: 54.75px;}
+      100% { opacity: 1; font-size: 55px;}
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {opacity: 0;}
+  20% {opacity: 0.04;}
+  40% {opacity: 0.16;}
+  60% {opacity: 0.36;}
+  80% {opacity: 0.64;}
+  100% {opacity: 1;}
+}
+
+@keyframes invis {
+  0% {opacity: 0};
+  100% {opacity: 0};
+}
+
+
+footer {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  margin: 1%;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  animation: invis 5s, fadeIn2 8s;
+}
+
+.footertext{
+  color: white;
+  opacity: 1.0;
+  text-align: center;
+  margin: 3px;
+  animation: invis 5s, fadeIn2 8s;
 }
